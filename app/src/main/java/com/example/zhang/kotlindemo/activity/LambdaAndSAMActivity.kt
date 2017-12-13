@@ -1,12 +1,13 @@
 package com.example.zhang.kotlindemo.activity
 
-//要想直接使用布局文件中的控件，必须添加这一句
+
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
 import android.util.Log
 import android.view.View
 import android.widget.Toast
 import com.example.zhang.kotlindemo.R
+//要想直接使用布局文件中的控件，必须添加这一句
 import kotlinx.android.synthetic.main.activity_main.*
 
 
