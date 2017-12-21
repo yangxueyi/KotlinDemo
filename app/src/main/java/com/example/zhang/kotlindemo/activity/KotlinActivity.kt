@@ -1,15 +1,13 @@
 package com.example.zhang.kotlindemo.activity
 
 
-
-
-//要想直接使用布局文件中的控件，必须添加这一句
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
 import android.util.Log
 import android.widget.Toast
 import com.example.zhang.kotlindemo.R
 import com.example.zhang.kotlindemo.bean.User
+//要想直接使用布局文件中的控件，必须添加这一句
 import kotlinx.android.synthetic.main.activity_main.*
 
 
@@ -129,9 +127,9 @@ class KotlinActivity : AppCompatActivity() {
 
     //for循环
     fun forOf(number : String){
-        val list = arrayListOf("1","2","3","4")
-        val list1 = listOf(0,1,2,3,4,5)
-        val li = ArrayList<String>()
+        val list = arrayListOf("1","2","3","4")//可变集合：可以进行增删改
+        val list1 = listOf(10,15,2,3,4,5)//只读集合：不可进行增删改
+        val li = arrayListOf<String>()
         li.add("hellttttt")
         println("li ===== ${li[0]}")
 
@@ -161,9 +159,15 @@ class KotlinActivity : AppCompatActivity() {
         val positives = list1.filter { it > 1 }
         println("positives = $positives size = ${positives.size}")
 
-
+        /**
+         * joinToString():
+         * 参一：separator  给每一个元素后面添加一个字符串进行连接
+         * 参二：prefix  在第一个元素前面添加的字符串
+         * 参三：postfix  在最后一个元素后面添加的字符串
+         * 参四：transform  将连接好的字符串转变为另一种格式
+         */
         println(list.joinToString(" "))
-
+        println(list.joinToString(separator = ",,",prefix = "*",postfix = "!",transform = {it.toUpperCase()}))
 //        val compare : (x: T,y: T) -> Int =
 
     }
