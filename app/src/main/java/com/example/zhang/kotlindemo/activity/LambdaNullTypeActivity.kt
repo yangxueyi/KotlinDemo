@@ -76,7 +76,6 @@ class LambdaNullTypeActivity :AppCompatActivity(){
      */
     fun strLength (s : String?) = s ?.length ?: 0
 
-
     /**
      * 安全转换："as?"
      * 含义：尝试把值转换为给定类型，如果类型不对就返回null
