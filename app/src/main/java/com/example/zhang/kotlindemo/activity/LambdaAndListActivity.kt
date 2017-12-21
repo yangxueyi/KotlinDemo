@@ -40,13 +40,13 @@ class LambdaAndListActivity : AppCompatActivity() {
         }
         println(sum2(1,2))
         //使用lambda比较认的年龄
-        val list = listOf(People("lisi", 20), People("wangwu", 23), People("zhaoliu", 23))
+        var list = listOf(People("lisi", 20), People("wangwu", 23), People("zhaoliu", 23))
         /*
         * 集合函数式API
         */
         listAPI(list)
 
-
+        list.maxBy { it.age }
         //直接使用maxBy就可以进行比较，参数就是一个lambda表达式
         println(list.maxBy { it.age })//"it"是自动生成的参数名称
         list.maxBy { p : People -> p.age }//等同于：list.maxBy { it.age }；更简单的模式：People::age,可读性差
@@ -59,7 +59,7 @@ class LambdaAndListActivity : AppCompatActivity() {
         list.joinToString { p : People -> p.name }//简洁但不够清晰
 
         //bean对象
-        var people = People("lisi",12)
+        val people = People("lisi",12)
         println(people.toString())
         people.name = "zhangsan"
         people.age = 33
