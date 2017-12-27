@@ -81,6 +81,7 @@ class LambdaNullTypeActivity :AppCompatActivity(){
      * 含义：尝试把值转换为给定类型，如果类型不对就返回null
      */
 
+
     /**
      * 非空断言："!!"
      * 含义：如果值为空，可显式的抛出异常:kotlin.KotlinNullPointerException

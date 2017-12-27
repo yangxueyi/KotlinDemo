@@ -17,7 +17,7 @@ package com.example.zhang.kotlindemo.bean
 *   copy()
 *   所有属性的 component1()、 component2()……等等
 * */
- data class People(var name :String,var age : Int){
+ data class People(var name :String, var age : Int){
 
 
     /*//实现toString方法:默认的toString格式是一串字符串
@@ -61,6 +61,11 @@ package com.example.zhang.kotlindemo.bean
     val peo = People.nameLength("lisi")
 
 
+    fun isOlderThan(person : People) : Boolean? {
+        if(age == null || person.age == null)
+            return null
+        return age > person.age
+    }
 
 
 }
